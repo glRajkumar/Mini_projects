@@ -1,0 +1,361 @@
+#exp-app{
+    max-width: 1366px;
+    max-height: 1770px;
+    width: 1366px;
+    height: 1770px;
+    top: 0;
+    left: 0;
+    background: var(--bg);
+    margin: 0 auto;
+}
+
+.exp-box::-webkit-scrollbar,
+#overflowdiv::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+
+.exp-box::-webkit-scrollbar-thumb,
+#overflowdiv::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(98, 0, 228, .5);
+}
+  
+#expense-main{
+    padding: 1rem;
+}
+
+#expense-main nav{
+    height: 165px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.exp-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+#expense-main button{
+    margin-top: .6rem;
+    color: #000000;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #03dac5;
+}
+
+#exp-logo{
+    font-size: 40px;
+    color: #fff;
+}
+
+#total{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#total p:first-child{
+    padding-right: 1rem;
+    font-size: 24px;
+}
+
+#total p:nth-child(2){
+    height: 52px;
+    width: 0;
+    border: 1px solid #fff;
+    opacity: 0.25;
+}
+
+#total p:last-child{
+    padding-left: 1rem;
+    font-size: 40px;
+    color: #fff;
+}
+
+#exp-hr{
+    height: 1px;
+    opacity: 0.25;
+    background-color: #fff;
+    margin-bottom: 3rem;
+}
+
+.exp{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.edit{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.11px;
+    opacity: .5;
+}
+
+.edit img{
+    width: 18px;
+    height: 18px;
+}
+
+.rupee{
+    align-items: center;
+    display: flex;
+}
+
+.rupee img{
+    margin-right: .2rem;
+    width: 15px;
+    height: 15px;
+}
+
+.exp-box{
+    overflow-x: scroll;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 493px;
+    height: 121px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.exp-light{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #000;
+    letter-spacing: 0.11px;
+    opacity: 0.52;
+}
+
+.exp-light p{
+    margin-left: .5rem;
+}
+
+.exp-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    letter-spacing: 0.15px;
+}
+
+.exp-title p:first-child{
+    color: #6200ee;
+}
+
+.exp-title p:last-child{
+    color: #000;
+}
+
+#overflowdiv{
+    height: 1500px;
+    overflow-y: scroll;
+}
+
+.no-exp{
+    text-align: center;
+    margin-top: 2rem;
+    color: #fff;
+}
+
+#create{
+    display: flex;
+    flex-direction: column;
+}
+
+#create input{
+    width: 390px;
+    height: 56px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 17px;
+    background: #6200ee;
+    margin-bottom: 20px;
+}
+
+#create input::placeholder{
+    color: #ffffff99;
+}
+
+#create input:focus{
+    outline: 0;
+}
+
+#create button{
+    cursor: pointer;
+    margin-top: 47px;
+    font-size: 14px;
+    color: #000000;
+    width: 172px;
+    height: 48px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #03dac5;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media(max-width: 1200px){
+    #exp-app{
+        width: 100%;
+    }
+
+    #expense-main nav{
+        height: 150px;
+    }
+
+    #expense-main{    
+        margin: 0 3rem;
+    }
+        
+    .exp-box{
+        padding: 1rem;
+        width: 400px;
+        height: 100px;
+    }
+
+    #create input{
+        width: 300px;
+        height: 45px;
+        border-radius: 3px;
+        margin-bottom: 15px;
+    }
+    
+    #create button{
+        margin-top: 25px;
+        width: 162px;
+        height: 40px;
+        border-radius: 40px;
+    }    
+}
+
+@media(max-width: 900px){
+    #expense-main nav{
+        height: 130px;
+    }
+
+    .exp-form{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .exp{
+        justify-content: center;
+    }
+
+    .exp-box{
+        width: 100%;
+        height: auto;
+    }
+    
+    #expense-main{    
+        margin: 0 2rem;
+    }
+        
+    .exp-body{
+        flex-direction: column;
+    }
+
+    #overflowdiv{
+        height: 1200px;
+    }    
+
+    #create{
+        margin-bottom: 2rem;
+    }
+
+    #create input{
+        width: 100%;
+        height: 45px;
+    }
+    
+    #create button{
+        margin: 0 auto;
+    }    
+}
+
+@media(max-width: 750px){
+    .exp-form{
+        width: 74%;
+    }
+}
+
+@media(max-width: 600px){
+    #expense-main{    
+        margin: 0 1rem;
+    }
+
+    #expense-main nav{
+        height: 100px;
+    }
+
+    .exp-form{
+        width: 80%;
+        margin: 0 auto;
+    }
+                
+    #exp-logo{
+        font-size: 30px;
+    }
+    
+    #total p:first-child{
+        padding-right: .8rem;
+        font-size: 18px;
+    }
+    
+    #total p:nth-child(2){
+        height: 40px;
+    }
+    
+    #total p:last-child{
+        padding-left: .8rem;
+        font-size: 30px;
+    }   
+}
+
+@media(max-width: 450px){
+    .exp-form{
+        width: 90%;
+    }
+
+    #exp-logo{
+        font-size: 25px;
+    }
+    
+    #total p:first-child{
+        padding-right: .5rem;
+        font-size: 15px;
+    }
+    
+    #total p:nth-child(2){
+        height: 30px;
+    }
+    
+    #total p:last-child{
+        padding-left: .5rem;
+        font-size: 25px;
+    }
+
+    #create input{
+        height: calc(1.5em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+    }
+}
+
+@media(max-width: 300px){
+    .exp-form{
+        width: 98%;
+    }
+}

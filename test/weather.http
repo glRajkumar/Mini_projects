@@ -1,0 +1,19 @@
+@host = http://localhost:5000
+
+### get weather info from darksky api
+POST {{host}}/weather/dark
+Content-Type: application/json
+
+{
+    "latitude": "72.780", 
+    "langitude":"-122.78"
+}
+
+### get weather info from openweathermap api
+POST {{host}}/weather/open
+Content-Type: application/json
+
+{
+    "city": "chennai", 
+    "country":"india"
+}

@@ -1,0 +1,82 @@
+#weather-main{
+    text-align: center;
+    min-height: 100vh;
+    color: #fff;
+    background: url('../img/weather/night.jpg') no-repeat center/cover;
+}
+
+#weather-main header{
+    background: black;
+    color: white;
+    padding: 1rem;
+    text-shadow: 1px 1px 3px wheat, 1px 1px 3px wheat;
+}
+
+#weather-main p{
+   padding: 0.3rem;
+}
+ 
+#sec-weather{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+#secal1,
+#secal2{
+    width: 46%;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #000;
+    border: 1px solid rgba(255, 255, 255, .3);
+    background-color: rgba(255, 255, 255, .6);
+}
+
+#secal1 > h3,
+#secal2 > h3{
+    margin-bottom: 1rem;
+}
+
+.weatherinfo{
+    padding: 1rem 0;
+}
+
+.weatherinfo > *{
+    margin-bottom: .3rem;
+}
+
+#weather-main label{
+    padding-bottom: 0.3rem;
+}
+
+#secal1 input,
+#secal2 input{
+    width: 80%;
+    margin-left: 10%;
+}
+
+@media (max-width:750px){
+    #sec-weather{
+       flex-direction: column;
+       align-items: center;
+    }
+
+    #secal1, #secal2{
+        width: 70%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width:450px){    
+    #secal1, #secal2{
+       width: 90%;
+    }
+
+    #secal1 input,
+    #secal2 input{
+        width: 100%;
+        margin-left: 0;
+    }
+}

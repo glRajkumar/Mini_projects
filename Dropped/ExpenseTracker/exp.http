@@ -1,0 +1,40 @@
+@host = http://localhost:8000
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjgwNTdhMWU4OTlhYjUyZDhhYmFiNzgiLCJpYXQiOjE2MDIyNDY1NzcsImV4cCI6MTYwMjMxMTM3N30.bDLlb4lSsA7SGatZk8OY8DGPWa3xgckqvB5qvz3ZkhU
+
+### get expense 
+GET {{host}}/expense
+Authorization: {{token}}
+
+### create expense
+POST {{host}}/expense
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "title": "title1",
+    "amount" : "2000",
+    "note" : "pic3",
+    "date" : "12.12.2002"
+}
+
+### put expense
+PUT {{host}}/expense
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "expId" : "5f7aea08bb12774844f52647",
+    "title" : "title3",
+    "amount" : "6000",
+    "note" : "piches",
+    "date" : "2.5.1999"
+}
+
+### delete expense
+DELETE  {{host}}/expense
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "_id" : "5f8057cee899ab52d8abab79"
+}

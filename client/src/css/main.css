@@ -1,0 +1,54 @@
+:root {
+    /* netflix */
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --light-color: #f4f4f4;
+
+    /* expence */
+    --bg : #6200ee;
+
+    /* #6200EE; #03DAC5; */
+}
+
+#main h1{
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.pages{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pages > *{
+    flex: 1 1 250px;
+}
+
+.page-holder{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    padding: 1rem;
+}
+
+.page-holder img{
+    max-width: 3rem;
+}
+
+.gen-but{
+    outline: 1px solid #2979FF;
+    color: #2979FF;
+    background-color: #fff;
+    padding: .5rem 1rem;
+}
+
+.gen-but:hover{
+    color: #fff;
+    background-color: #2979FF;
+}
