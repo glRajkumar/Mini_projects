@@ -1,1 +1,0 @@
-A Simple Expense Tracker using MERN stack
