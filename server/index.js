@@ -25,6 +25,7 @@ app.use("/user", userControllers)
 app.use("/weather", weatherControllers)
 app.use("/expense", expenseControllers)
 
+//chat related
 io.on('connection', (socket) => {
     //Join the chat
     socket.on('join', ({ name, room }, cb) => {
