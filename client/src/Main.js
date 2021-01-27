@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './css/main.css'
 
 function Main() {
-    console.log(process.env.NODE_ENV)
     return (
         <section id="main">
             <h1>Mini Project Collections</h1>

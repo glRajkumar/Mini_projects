@@ -33,19 +33,23 @@ io.on('connection', (socket) => {
 
         if (error) return cb(error)
 
-        socket.join(user.room)
-        socket.emit('message', { user: "admin", text: `${user.name}, Welcome to the room ${user.room}` })
-        socket.broadcast.to(user.room).emit('message', { user: "admin", text: `${user.name} has joined` })
+        if (user) {
+            socket.join(user.room)
+            socket.emit('message', { user: "admin", text: `${user.name}, Welcome to the room ${user.room}` })
+            socket.broadcast.to(user.room).emit('message', { user: "admin", text: `${user.name} has joined` })
 
-        io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) })
+            io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) })
+        }
     })
 
     //Send messages
     socket.on('sendMessage', (message, callback) => {
         const user = getUser(socket.id)
 
-        io.to(user.room).emit('message', { user: user.name, text: message })
-        io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) })
+        if (user) {
+            io.to(user.room).emit('message', { user: user.name, text: message })
+            io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) })
+        }
         callback()
     })
 
@@ -54,14 +58,18 @@ io.on('connection', (socket) => {
     socket.on('typing', (typing_name) => {
         const user = getUser(socket.id)
 
-        socket.broadcast.to(user.room).emit('typing', { typing_name, istyping: true });
+        if (user) {
+            socket.broadcast.to(user.room).emit('typing', { typing_name, istyping: true });
+        }
     });
 
     //when stop typing
     socket.on('stopedtyping', () => {
         const user = getUser(socket.id)
 
-        socket.broadcast.to(user.room).emit('stopedtyping', { istyping: false });
+        if (user) {
+            socket.broadcast.to(user.room).emit('stopedtyping', { istyping: false });
+        }
     });
 
     //disconnect from the chat

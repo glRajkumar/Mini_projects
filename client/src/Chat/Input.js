@@ -13,7 +13,7 @@ const Input = ({ istyping, typing_name, OnKeyPressEvent, message, setMessage, se
         placeholder="Type a message..."
         value={message}
         onChange={e => setMessage(e.target.value)}
-        onKeyPress={e => OnKeyPressEvent(e)}
+        onKeyDown={e => OnKeyPressEvent(e)}
       />
       <button className="sendButton" onClick={e => sendMessage(e)}>Send</button>
     </div>
