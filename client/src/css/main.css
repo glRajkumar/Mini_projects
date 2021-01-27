@@ -41,6 +41,11 @@
     max-width: 3rem;
 }
 
+.page-holder svg{
+    margin: 0 1.1rem;
+    margin-right: .8rem;
+}
+
 .gen-but{
     outline: 1px solid #2979FF;
     color: #2979FF;
